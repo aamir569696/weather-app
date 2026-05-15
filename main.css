@@ -673,7 +673,7 @@ body {
 @media (max-width: 1024px) {
   .section-view1 {
     height: auto;
-    min-height: 100vh;
+    min-height: 88vh;
   }
   .section-view1 .navbar {
     width: 90%;
