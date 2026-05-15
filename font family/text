@@ -1,0 +1,65 @@
+let dateE1 = document.querySelector(".date");
+let dayE1 = document.querySelector(".day");
+let timeE1 = document.querySelector(".time-day");
+let cityE1 = document.querySelector(".city");
+
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+function updateTime() {
+  let now = new Date();
+
+  let currentDate = now.getDate();
+  let currentMonth = now.getMonth();
+  let currentYear = now.getFullYear();
+  let currentHour = now.getHours();
+  let currentMinutes = now.getMinutes();
+  let currensecend = now.getSeconds();
+
+  let ampm;
+
+  if (currentHour >= 12) {
+    ampm = "PM";
+  } else {
+    ampm = "AM";
+  }
+
+  currentHour=currentHour%12;
+
+  if(currentHour===0){
+    currentHour='12'
+  }
+  if(currentMinutes<10){
+    currentMinutes="0"+currentMinutes
+  }if(currensecend<10){
+    currensecend="0"+currensecend
+  }
+
+  dateE1.innerHTML = `${currentDate} ${months[currentMonth]} ${currentYear}`;
+  dayE1.innerHTML = days[now.getDay()];
+  cityE1.innerHTML = "Dera ismail Khan";
+  timeE1.innerHTML = `${currentHour}:${currentMinutes}:${currensecend} ${ampm}`;
+}
+updateTime();
+setInterval(updateTime,1000)

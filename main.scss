@@ -1,0 +1,1381 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  // font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+:root {
+  /*bg-color*/
+
+  --color-bg-primary: #0F172A;
+  --color-bg-secondary: #233149;
+
+  /*text-color*/
+  --text-primery-color: #E2E8F0;
+
+  // padding
+
+
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./font family/font.woff2");
+}
+
+.section-view1 {
+  // width: 100%;
+  height: 100vh;
+  background-color: var(--color-bg-primary);
+  display: flex;
+  flex-direction: column;
+
+
+
+  .view1 {
+    width: 85%;
+    // width: fit-content;
+    // height: 45%;
+    background-image: url('/productivity/image/weatherdark.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    // background-color: pink;
+    margin: 3rem auto;
+    border-radius: 1rem;
+    display: flex;
+    //  gap: 18rem;
+    overflow: hidden;
+    justify-content: space-between;
+    border: 3px solid rgba(255, 255, 255, 0.781);
+    transition: all 0.5s ease-in-out;
+
+
+    &:hover {
+      border: 3px solid rgba(255, 255, 255, 0.781);
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.781);
+      transform: scale(1.08);
+    }
+
+    .view-left {
+      // width: 70%;
+
+      //  height: 100%;
+      //background-color: red;
+      color: var(--text-primery-color);
+      padding: 2rem;
+      line-height: 4rem;
+
+
+
+      .date {
+        font-size: 2.2rem;
+        font-weight: 300;
+      }
+
+      .time {
+        display: flex;
+        gap: 2rem;
+        font-size: 2.7rem;
+        font-weight: bolder;
+
+        .time-day {
+          letter-spacing: 5px;
+
+        }
+      }
+
+      .line {
+        width: 100%;
+        height: 0.2rem;
+        background: linear-gradient(to right, rgb(255, 255, 255), rgba(0, 0, 0, 0));
+        ;
+        margin: 0.5rem 0;
+      }
+
+      .city {
+        font-size: 1.9rem;
+        font-weight: 500;
+      }
+
+    }
+
+    .view-right {
+      //  width: 40%;
+      //  height: 100%;
+      //  background-color: blue;
+      color: var(--text-primery-color);
+      text-align: center;
+      padding: 3rem;
+
+
+      .right-top {
+        width: 100%;
+        //  height: 50%;
+        //background-color: red;
+
+        .temperature {
+          font-size: 3rem;
+        }
+
+        .weather {
+          font-size: 1.5rem;
+        }
+      }
+
+      .right-bottom {
+        // width: 100%;
+        // height: 50%;
+        //background-color: green;
+        padding: 1rem;
+        line-height: 2rem;
+        font-size: 1.5rem;
+      }
+
+    }
+
+  }
+}
+
+.section-view1 .navbar {
+  width: 85%;
+  height: 25%;
+  background-color: var(--color-bg-secondary);
+  margin: 2rem auto;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--text-primery-color);
+  font-weight: thick;
+
+ 
+
+  backdrop-filter: blur(10px);
+
+}
+
+
+.section-view2 {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .main-view2 {
+    width: 85%;
+    height: 45%;
+    // background-color: yellowgreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+
+    .box-main {
+      width: 18%;
+      height: 100%;
+      background-color: var(--color-bg-secondary);
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+
+      .box-image {
+        width: 85%;
+        height: 60%;
+        //  background-color: rgb(180, 8, 37);
+        margin: 1rem auto;
+        border-radius: .7rem;
+        border: 3px solid rgba(255, 255, 255, 0.342);
+
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: .7rem;
+
+        }
+      }
+
+      .todo-text-holder {
+        color: white;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 600;
+
+        .line {
+          width: 45%;
+          height: 3px;
+          background-color: rgb(247, 245, 248);
+          margin: 0.2rem auto;
+        }
+      }
+    }
+  }
+}
+
+
+
+.main-view2 {
+
+  &:hover .box-main {
+    transform: scale(.9);
+    filter: blur(5px);
+    opacity: .9;
+  }
+
+  .box-main {
+    transition: .4s ease;
+    cursor: pointer;
+
+
+
+    &:hover {
+      transform: scale(1.1);
+      filter: blur(0);
+      opacity: 1;
+      z-index: 100;
+
+    }
+  }
+}
+
+// @media (max-width: 768px) and (min-width: 480px) {
+
+//   .section-view1 .view1 {
+//     font-size: 20px;
+//   }
+// }
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+
+  display: none;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4d94;
+}
+
+
+
+
+//////////////////////
+
+.todo-app {
+  position: fixed;
+  inset: 0;
+
+  background-image: url("./image/tododark.png");
+  background-size: cover;
+  background-position: center;
+
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: scale(0);
+  opacity: 0;
+
+  transition: .7s ease;
+}
+
+
+/* Active */
+
+.todo-app.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+/* Close Button */
+
+.close-btn {
+  position: absolute;
+
+  top: 2rem;
+  right: 2rem;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background-color: white;
+  color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.5rem;
+  font-weight: 900;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(.9);
+  }
+}
+
+
+// Content 
+
+.todo-app-content {
+  color: white;
+  font-size: 3rem;
+}
+
+
+// To-do UI
+.todo-ui {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+ 
+
+  //todo title
+
+  .todo-title {
+    width: 70rem;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    background: transparent;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  //todo input section
+
+  .todo-input {
+    width: 100%;
+    height: 13%;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+
+
+
+    .input {
+      width: 70%;
+      height: 60%;
+      margin: 1rem 0rem;
+      padding: 0px 20px;
+      border-radius: .5rem;
+      background-color: #0F172A;
+      outline: none;
+      border: none;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .label {
+      font-size: 1.2rem;
+      color: white;
+      font-weight: 600;
+
+    }
+
+    .input::placeholder {
+      color: rgba(255, 255, 255, 0.349);
+    }
+
+    .addbtn {
+      padding: 5px 15px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.6rem;
+      font-weight: 900;
+      background-color: #3B82F6;
+      color: white;
+
+      &:active {
+        transform: scale(.9);
+      }
+
+    }
+
+  }
+
+  // todo task section
+
+  .todo-task {
+    width: 100%;
+    height: 50%;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    //   background-color: pink;
+    padding: 1rem;
+    overflow: auto;
+
+    .task-create {
+      width: 100%;
+      height: 23%;
+      background-color: var(--color-bg-primary);
+      padding: 1.1rem 1rem;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 500;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      .btns .update {
+        padding: 6px 7px;
+        background-color: #22C55E;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 900;
+
+        &:active {
+          transform: scale(.9);
+        }
+
+      }
+
+      .btns .delete {
+        padding: 6px 9px;
+        background-color: #3B82F6;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 900;
+
+        &:active {
+          transform: scale(.9);
+        }
+
+      }
+    }
+  }
+}
+
+.important {
+  border-left: 5px solid red;
+  background-color: rgba(255, 0, 0, 0.1);
+  transform: scale(1);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+//planner ui
+.planner-ui {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  .planner-title {
+    width: 85%;
+    height: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+    background: transparent;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(15px);
+
+  }
+
+  .planner-tasks {
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+    background: transparent;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+
+
+    .planner-task {
+      width: 32%;
+      height: 25%;
+      background-color: #0F172A;
+      border-radius: .5rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: .6rem;
+      gap: 5px;
+      font-weight: 600;
+      font-size: 1rem;
+
+
+      .palnner-task-input {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 1.5rem;
+
+
+      }
+
+    }
+  }
+
+}
+
+//motivational quote ui
+
+.motivation-ui {
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgb(253, 253, 253);
+
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    text-align: center;
+    background: transparent;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  .quote {
+    width: 85%;
+    height: 50vh;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 1rem;
+    text-align: center;
+
+    margin: 0 auto;
+  }
+}
+
+
+//pomodoro ui
+
+.pomodoro-ui {
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding: 1rem 23rem;
+    border-radius: 1rem;
+
+  }
+
+  .pomodoro-timmer {
+    width: 100%;
+    height: 70vh;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    gap: 2rem;
+
+
+    .timeer {
+      font-size: 5rem;
+      font-weight: 700;
+      //  background-color: yellow;
+
+      .timmer-btns {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        background-color: rgb(20, 11, 156);
+
+      }
+    }
+
+    .start-btn {
+      width: 100px;
+      padding: 10px;
+      background-color: #22C55E;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 900;
+
+      &:active {
+        transform: scale(.9);
+      }
+
+
+    }
+
+    .reset-btn {
+      width: 100px;
+      padding: 10px;
+      background-color: #3B82F6;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 900;
+
+      &:active {
+        transform: scale(.9);
+      }
+    }
+
+    .pause-btn {
+      width: 100px;
+      padding: 10px;
+      background-color: #F59E0B;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 900;
+
+      &:active {
+        transform: scale(.9);
+      }
+    }
+  }
+}
+
+
+//keyboard shortcuts ui
+
+.kanban-ui {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.35);
+
+
+  .kanban-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    h1 {
+      color: white;
+      font-size: 38px;
+      font-weight: 700;
+    }
+
+    .kanban-input {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      input {
+        width: 300px;
+        padding: 14px 18px;
+        border: none;
+        outline: none;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.12);
+        color: white;
+        font-size: 15px;
+        backdrop-filter: blur(10px);
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      button {
+        padding: 14px 24px;
+        border: none;
+        border-radius: 14px;
+        background: white;
+        color: black;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  .kanban-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    .kanban-column {
+      min-height: 500px;
+      padding: 20px;
+      border-radius: 24px;
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+
+      h2 {
+        color: white;
+        margin-bottom: 25px;
+        font-size: 22px;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+
+      .kanban-tasks {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        .kanban-task {
+          padding: 16px;
+          border-radius: 18px;
+          background: rgba(255, 255, 255, 0.12);
+          backdrop-filter: blur(10px);
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+
+          span {
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+          }
+
+          .task-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            button {
+              width: 38px;
+              height: 38px;
+              border: none;
+              border-radius: 12px;
+              cursor: pointer;
+              font-size: 16px;
+              transition: 0.3s;
+
+              &:hover {
+                transform: translateY(-3px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .todo {
+      box-shadow: 0 0 20px rgba(0, 140, 255, 0.25);
+    }
+
+    .progress {
+      box-shadow: 0 0 20px rgba(255, 166, 0, 0.25);
+    }
+
+    .done {
+      box-shadow: 0 0 20px rgba(0, 255, 136, 0.25);
+    }
+  }
+}
+
+
+// =============================================
+// RESPONSIVE SCSS - Sab devices ke liye
+// =============================================
+
+// -----------------------------------------------
+// BREAKPOINTS:
+// Mobile Small : max-width 480px
+// Mobile       : max-width 768px
+// Tablet       : max-width 1024px
+// -----------------------------------------------
+
+
+// =============================================
+// TABLET  (max-width: 1024px)
+// =============================================
+@media (max-width: 1024px) {
+
+  // --- Section View 1 ---
+  .section-view1 {
+    height: auto;
+    min-height: 100vh;
+
+    .navbar {
+      width: 90%;
+      height: auto;
+      padding: 1.2rem;
+      font-size: 1rem;
+      margin: 1.5rem auto;
+    }
+
+    .view1 {
+      width: 90%;
+      flex-direction: column;
+      margin: 1.5rem auto;
+
+      .view-left {
+        line-height: 3rem;
+        padding: 1.5rem;
+
+        .date { font-size: 1.8rem; }
+        .time { font-size: 2.2rem; gap: 1rem; }
+        .city { font-size: 1.5rem; }
+      }
+
+      .view-right {
+        padding: 1.5rem;
+        text-align: center;
+
+        .right-top .temperature { font-size: 2.5rem; }
+        .right-top .weather     { font-size: 1.3rem; }
+        .right-bottom            { font-size: 1.2rem; }
+      }
+    }
+  }
+
+  // --- Section View 2 ---
+  .section-view2 {
+    height: auto;
+    padding: 2rem 0;
+
+    .main-view2 {
+      width: 90%;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+
+      .box-main {
+        width: 30%;
+        min-width: 180px;
+
+        .box-image { height: 55%; }
+        .todo-text-holder { font-size: 1.1rem; }
+      }
+    }
+  }
+
+  // --- Todo UI ---
+  .todo-ui {
+    padding: 1rem;
+    gap: 1.5rem;
+
+    .todo-title { width: 100%; font-size: 2.2rem; }
+
+    .todo-input {
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      padding: 1rem;
+
+      .input  { width: 100%; }
+      .addbtn { font-size: 1.3rem; }
+    }
+
+    .todo-task { padding: 0.8rem; }
+  }
+
+  // --- Planner UI ---
+  .planner-ui {
+    gap: 1.5rem;
+
+    .planner-title { font-size: 1.8rem; width: 90%; }
+
+    .planner-tasks {
+      width: 95%;
+      gap: 10px;
+
+      .planner-task {
+        width: 48%;
+
+        .palnner-task-input { font-size: 1.2rem; }
+      }
+    }
+  }
+
+  // --- Motivation UI ---
+  .motivation-ui {
+    h1    { font-size: 3rem; padding: 1.5rem; }
+    .quote { font-size: 1.6rem; width: 90%; }
+  }
+
+  // --- Pomodoro UI ---
+  .pomodoro-ui {
+    h1 { font-size: 3rem; padding: 1rem 5rem; }
+
+    .pomodoro-timmer {
+      .timeer { font-size: 4rem; }
+
+      .timmer-btns {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+  }
+
+  // --- Kanban UI ---
+  .kanban-ui {
+    padding: 20px;
+
+    .kanban-top {
+      h1 { font-size: 28px; }
+      .kanban-input input  { width: 220px; }
+    }
+
+    .kanban-board {
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .kanban-column { min-height: auto; }
+    }
+  }
+}
+
+
+// =============================================
+// MOBILE  (max-width: 768px)
+// =============================================
+@media (max-width: 768px) {
+
+  // --- Section View 1 ---
+  .section-view1 {
+    .navbar {
+      width: 92%;
+      font-size: 0.9rem;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .view1 {
+      width: 92%;
+      flex-direction: column;
+      margin: 1rem auto;
+
+      &:hover { transform: scale(1.02); } // hover effect thoda kam karo mobile pe
+
+      .view-left {
+        padding: 1.2rem;
+        line-height: 2.5rem;
+
+        .date { font-size: 1.4rem; }
+
+        .time {
+          font-size: 1.7rem;
+          gap: 0.7rem;
+          flex-wrap: wrap;
+
+          .time-day { letter-spacing: 2px; }
+        }
+
+        .city { font-size: 1.3rem; }
+      }
+
+      .view-right {
+        padding: 1rem 1.5rem 1.5rem;
+
+        .right-top .temperature { font-size: 2rem; }
+        .right-top .weather     { font-size: 1.1rem; }
+        .right-bottom            { font-size: 1.1rem; line-height: 1.8rem; }
+      }
+    }
+  }
+
+  // --- Section View 2 ---
+  .section-view2 {
+    padding: 1.5rem 0 2rem;
+
+    .main-view2 {
+      width: 92%;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      height: auto;
+
+      &:hover .box-main {
+        transform: scale(1);
+        filter: blur(0);
+        opacity: 1;
+      }
+
+      .box-main {
+        width: 45%;
+        min-width: 140px;
+        gap: 1rem;
+
+        .box-image {
+          height: 160px;
+          width: 90%;
+        }
+
+        .todo-text-holder {
+          font-size: 1rem;
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  // --- Todo UI ---
+  .todo-ui {
+    gap: 1.2rem;
+    padding: 0.8rem;
+
+    .todo-title {
+   //   width: 100%;
+      font-size: 1.8rem;
+      padding: 0.5rem;
+     // background: none;
+      //  -webkit-backdrop-filter: blur(0px);
+      //  backdrop-filter: blur(10px);
+        background: none;
+        z-index: -1;
+
+    }
+
+    .todo-input {
+      flex-wrap: wrap;
+      padding: 0.8rem;
+      gap: 0.7rem;
+      height: 30%;
+
+      .input  { width: 100%; height: 50px; font-size: 0.95rem; }
+      .label  { font-size: 1rem; }
+      .addbtn { font-size: 1.2rem; padding: 4px 12px; }
+    }
+
+    .todo-task {
+      padding: 0.6rem;
+
+      .task-create {
+        font-size: 0.95rem;
+        padding: 0.8rem;
+
+        .btns .update,
+        .btns .delete { font-size: 0.95rem; padding: 5px 6px; }
+      }
+    }
+  }
+
+  // --- Planner UI ---
+  .planner-ui {
+    .planner-title { font-size: 1.4rem; text-align: center; }
+
+    .planner-tasks {
+      padding: 1rem;
+      gap: 8px;
+
+      .planner-task {
+        width: 48%;
+        height: auto;
+        padding: 0.8rem;
+
+        label { font-size: 0.85rem; }
+        .palnner-task-input { font-size: 1rem; }
+      }
+    }
+  }
+
+  // --- Motivation UI ---
+  .motivation-ui {
+    padding: 1rem;
+    gap: 1.5rem;
+
+    h1    { font-size: 2.2rem; padding: 1rem; }
+    .quote {
+      font-size: 1.3rem;
+      width: 95%;
+      padding: 1.2rem;
+      height: auto;
+      min-height: 30vh;
+    }
+  }
+
+  // --- Pomodoro UI ---
+  .pomodoro-ui {
+    padding: 1rem;
+    gap: 1.5rem;
+
+    h1 {
+      font-size: 2.2rem;
+      padding: 1rem 2rem;
+    }
+
+    .pomodoro-timmer {
+      height: auto;
+      min-height: 50vh;
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+
+      .timeer { font-size: 3.5rem; }
+
+      .timmer-btns {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.8rem;
+        background-color: transparent !important;
+        margin-top: 1.5rem;
+      }
+
+      .start-btn,
+      .pause-btn,
+      .reset-btn {
+        width: 85px;
+        font-size: 0.95rem;
+        padding: 8px;
+      }
+    }
+  }
+
+  // --- Kanban UI ---
+  .kanban-ui {
+    padding: 15px;
+    margin-top: 20rem;
+
+    .kanban-top {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 25px;
+
+      h1 { font-size: 24px; }
+
+      .kanban-input {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        input  { width: 100%; }
+        button { width: 100%; }
+      }
+    }
+
+    .kanban-board {
+      grid-template-columns: 1fr;
+      gap: 15px;
+
+      .kanban-column {
+        min-height: auto;
+        padding: 15px;
+
+        h2 { font-size: 18px; }
+
+        .kanban-tasks .kanban-task {
+          padding: 12px;
+          flex-wrap: wrap;
+          gap: 8px;
+
+          span { font-size: 14px; }
+
+          .task-btns button {
+            width: 34px;
+            height: 34px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  // --- Todo App Overlay ---
+  .todo-app {
+    .close-btn {
+      top: 1rem;
+      right: 1rem;
+      width: 44px;
+      height: 44px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+// =============================================
+// MOBILE SMALL  (max-width: 480px)
+// =============================================
+@media (max-width: 480px) {
+
+  // --- Section View 1 ---
+  .section-view1 {
+    .navbar {
+      width: 95%;
+      font-size: 0.82rem;
+      margin: 1rem auto;
+    }
+
+    .view1 {
+      width: 95%;
+
+      .view-left {
+        padding: 1rem;
+        line-height: 2.2rem;
+
+        .date { font-size: 1.1rem; }
+        .time { font-size: 1.4rem; gap: 0.5rem; }
+        .city { font-size: 1.1rem; }
+      }
+
+      .view-right {
+        padding: 0.8rem 1rem 1.2rem;
+
+        .right-top .temperature { font-size: 1.7rem; }
+        .right-top .weather     { font-size: 1rem; }
+        .right-bottom            { font-size: 0.95rem; line-height: 1.6rem; }
+      }
+    }
+  }
+
+  // --- Section View 2 ---
+  .section-view2 {
+    .main-view2 {
+      width: 95%;
+      gap: 1rem;
+
+      .box-main {
+        width: 45%;
+
+        .box-image { height: 130px; }
+        .todo-text-holder { font-size: 0.9rem; }
+      }
+    }
+  }
+
+  // --- Planner ---
+  .planner-ui {
+    .planner-tasks {
+      .planner-task {
+        width: 100%; // ek column ho jaye choti screen pe
+      }
+    }
+  }
+
+  // --- Pomodoro ---
+  .pomodoro-ui {
+    h1 { font-size: 1.8rem; padding: 0.8rem 1rem; }
+
+    .pomodoro-timmer {
+      .timeer { font-size: 2.8rem; }
+
+      .start-btn,
+      .pause-btn,
+      .reset-btn { width: 75px; font-size: 0.85rem; }
+    }
+  }
+
+  // --- Motivation ---
+  .motivation-ui {
+    h1  
+      { font-size: 1.8rem; 
+      margin-top: -110px;}
+    .quote { font-size: 1.1rem; }
+  }
+
+  // --- Todo ---
+  .todo-ui {
+    .todo-title { font-size: 1.5rem; }
+  }
+
+  // --- Kanban ---
+  .kanban-ui {
+    .kanban-top h1 { font-size: 20px; }
+
+    .kanban-board .kanban-column {
+      h2 { font-size: 16px; }
+    }
+  }
+}
